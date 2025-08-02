@@ -1,0 +1,26 @@
+{
+  "intents": [
+    {
+      "tag": "greetings",
+      "patterns": ["hello", "hey", "hi", "good day", "Greetings", "what's up?", "how is it going?"],
+      "responses": ["Hello!", "Hey!", "What can I do for you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "cao", "see ya"],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+    },
+    {
+      "tag": "order",
+      "patterns": ["I want to buy book", "I need product"],
+      "responses": ["Sure, which book?"],
+      "context_set": "awaiting_book_choice"
+    },
+    {
+      "tag": "book_choice",
+      "patterns": ["Python", "data science", "AI"],
+      "responses": ["Great choice! We'll process it"],
+      "context_filter": ["awaiting_book_choice"]
+    }
+  ]
+}
